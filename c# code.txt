@@ -1,0 +1,390 @@
+using System.Reflection.Metadata.Ecma335;
+
+class a
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            string Admin, e, e1, e2, p, p1, p2;
+            int r,r1;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("                                    WELCOME TO DIGITAL FUNDRAISING MANAGEMENT PORTAL                        ");
+            Console.WriteLine("-----------------------------------------------------------------------------------------------------------------------");
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+
+            Console.WriteLine("Select type ");
+            Console.WriteLine("1.ADMIN");
+            Console.WriteLine("2.SPONSOR");
+            Console.WriteLine("3.USER");
+             r = Convert.ToInt32(Console.ReadLine());
+            
+            if (r == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine("1.ADMIN");
+
+                Console.WriteLine("Are you a new Register");
+                Console.WriteLine("1.Register");
+                Console.WriteLine("2.Login");
+                int q2 = Convert.ToInt32(Console.ReadLine());
+                if (q2 == 1)
+                {
+                    Console.Write("Admin Name:" + "Admin");
+                    Console.WriteLine();
+                    Console.Write("Contact no:");
+                    double c = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Email id:");
+                    e = Console.ReadLine();
+                    Console.Write("password:");
+                    p = (Console.ReadLine());
+                    Console.WriteLine("_____________________________________________________________________________________________");
+                  mango:
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("DOYOU WANT TO PERFORM CRUD OPERATIONS");
+                    Console.WriteLine("1.yes");
+                    Console.WriteLine("2.no");
+                    int o = Convert.ToInt32(Console.ReadLine());
+                    if(o==1)
+                    {
+                        Console.WriteLine("Select the CRUD operation you want to perform");
+                        Console.WriteLine("1.CREATE");
+                        Console.WriteLine("2.READ/RETRIVE");
+                        Console.WriteLine("3.UPDATE");
+                        Console.WriteLine("4.DELETE");
+                        int s = Convert.ToInt32(Console.ReadLine());
+                        if(s==1)
+                        {
+                            Console.WriteLine("The previous password is:" + p);
+                            Console.WriteLine("Create the new password");
+                            p = Console.ReadLine();
+
+
+                        }
+                        else if(s==2)
+                        {
+                            Console.WriteLine("Read the password:"+p);
+                           
+
+                        }
+                        else if(s==3)
+                        {
+                            Console.WriteLine(" Before Update the  password is:"+p);
+                            Console.WriteLine(" After Update the  password");
+                            p = Console.ReadLine();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Before Delete the  password is:"+p);
+                            Console.WriteLine(" After Delete the password");
+                            p = Console.ReadLine();
+                        }
+                        goto mango;
+
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Thank you");
+                        
+                    }
+                    Console.WriteLine("_____________________________________________________________________________________________");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine();
+                    Console.Write("Account no:");
+                   int aa =Convert.ToInt32(Console.ReadLine());
+
+
+
+
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("do you want log in: ");
+                    Console.WriteLine("1.yes");
+                    Console.WriteLine("2.no");
+                    int a = Convert.ToInt32(Console.ReadLine());
+                    if (a == 1)
+                    {
+                    x:
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine("email:");
+                        e1 = Console.ReadLine();
+                        Console.WriteLine("password:");
+                        p1 = (Console.ReadLine());
+                        if (e == e1 && p == p1)
+                        {
+                            Console.WriteLine("logged in------");
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Cyan;
+                            Console.WriteLine("incorrect password ,Try again.....");
+                            goto x;
+                        }
+
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("thankyou");
+                    }
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("email:");
+                    e2 = Console.ReadLine();
+                    Console.WriteLine("PASSWORD:");
+                    p2 = (Console.ReadLine());
+                    Console.WriteLine("Logged in----");
+                }
+
+
+               /* Console.Clear();*/
+            }
+            Console.WriteLine("_____________________________________________________________________________________________");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Select type ");
+            Console.WriteLine("1.ADMIN");
+            Console.WriteLine("2.SPONSOR");
+            Console.WriteLine("3.USER");
+             r = Convert.ToInt32(Console.ReadLine());
+
+            if(r == 2)
+            {
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("******* SPONSOR ********");
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Are you a new Register");
+                Console.WriteLine("1.Register");
+                Console.WriteLine("2.Login");
+                int q1 = Convert.ToInt32(Console.ReadLine());
+                if (q1 == 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("Sponsor Name:");
+                    string s = Console.ReadLine();
+                    
+                    Console.Write("Contact no:");
+                    double c1 = Convert.ToDouble(Console.ReadLine());
+                    Console.Write("Email id:");
+                    e = Console.ReadLine();
+                    Console.Write("password:");
+                    p = (Console.ReadLine());
+                    Console.Write("Account no:");
+                    int sa = Convert.ToInt32(Console.ReadLine());
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine("do you want log in:");
+                    Console.WriteLine("1.yes");
+                    Console.WriteLine("2.no");
+                    int a = Convert.ToInt32(Console.ReadLine());
+                    if (a == 1)
+                    {
+                    x:
+                        Console.Write("email:");
+                        e1 = Console.ReadLine();
+                        Console.Write("password:");
+                        p1 = (Console.ReadLine());
+                        if (e == e1 && p == p1)
+                        {
+                            Console.WriteLine("logged in------");
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("incorrect password ,Try again.....");
+                            goto x;
+                        }
+
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.WriteLine("thankyou");
+                    }
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("email:");
+                    e2 = Console.ReadLine();
+                    Console.WriteLine("PASSWORD:");
+                    p2 = (Console.ReadLine());
+                    Console.WriteLine("Logged in----");
+                    Console.WriteLine();
+                }
+                
+            }/*Console.Clear();*/
+            Console.WriteLine("_____________________________________________________________________________________________");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Select type ");
+            Console.WriteLine("1.ADMIN");
+            Console.WriteLine("2.SPONSOR");
+            Console.WriteLine("3.USER");
+             r = Convert.ToInt32(Console.ReadLine());
+
+            if(r==3)
+            {
+
+
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("USER ........");
+
+                Console.WriteLine("Are you a new Register");
+                Console.WriteLine("1.Register");
+                Console.WriteLine("2.Login");
+                int q = Convert.ToInt32(Console.ReadLine());
+                if (q == 1)
+                {
+                    Console.WriteLine("user Name:");
+                    string u = Console.ReadLine();
+                   
+                    Console.WriteLine("Contact no:");
+                    double c2 = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Email id:");
+                    e = Console.ReadLine();
+                    Console.WriteLine("password");
+                    p = (Console.ReadLine());
+                    Console.Write("Account no:");
+                    int ua =Convert.ToInt32 (Console.ReadLine());
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine(" Do you want log in: ");
+                    Console.WriteLine("1.yes");
+                    Console.WriteLine("1.no");
+                    int a = Convert.ToInt32(Console.ReadLine());
+                    if (a == 1)
+                    {
+                    x:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("email:");
+                        e1 = Console.ReadLine();
+                        Console.WriteLine("password:");
+                        p1 = (Console.ReadLine());
+                        if (e == e1 && p == p1)
+                        {
+                            Console.WriteLine("logged in------");
+                            Console.WriteLine();
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("incorrect password ,Try again.....");
+                            goto x;
+                        }
+
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Thank you..........");
+                    }
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.WriteLine("email:");
+                    e2 = Console.ReadLine();
+                    Console.WriteLine("PASSWORD:");
+                    p2 = (Console.ReadLine());
+                    Console.WriteLine("Logged in----");
+                    Console.WriteLine();
+                }
+
+                /*Console.Clear(); */
+            }
+            Console.WriteLine("_____________________________________________________________________________________________");
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("                        BILL MECHANISM                    ");
+            Console.WriteLine();
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine("Select type ");
+                Console.WriteLine("1.ADMIN");
+                Console.WriteLine("2.SPONSOR");
+                Console.WriteLine("3.USER");
+                 r1 = Convert.ToInt32(Console.ReadLine());
+                if (r1 == 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("Account no:");
+                    int aa = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("Admin Account Balance is:");
+                    int a = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Sponsor donated money is:");
+                    int s = Convert.ToInt32(Console.ReadLine());
+
+                    a = a + s;
+                    Console.WriteLine("Admin Account Balance is:" + a);
+                    Console.WriteLine("User needed money is:");
+                    int u = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Admin given  money to user is:");
+                    int a1 = Convert.ToInt32(Console.ReadLine());
+
+
+                    Console.WriteLine("The Remaining Admin Account Balance is:" + (a - a1));
+
+                }
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("Select type ");
+                Console.WriteLine("1.ADMIN");
+                Console.WriteLine("2.SPONSOR");
+                Console.WriteLine("3.USER");
+                r1= Convert.ToInt32(Console.ReadLine());
+                 if (r1 == 2)
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.Write("Account no:");
+                    int sa = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("Sponsor donated money is:");
+                    int s = Convert.ToInt32(Console.ReadLine());
+
+                }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Select type ");
+                Console.WriteLine("1.ADMIN");
+                Console.WriteLine("2.SPONSOR");
+                Console.WriteLine("3.USER");
+                 r1 = Convert.ToInt32(Console.ReadLine());
+                if(r1==3)
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("Account no:");
+                    int ua = Convert.ToInt32(Console.ReadLine());
+
+                    Console.WriteLine("User needed money is:");
+                    int u = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Admin given  money to user is:");
+                    int a1 = Convert.ToInt32(Console.ReadLine());
+                    
+
+                }
+                
+            }
+
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.WriteLine("   THANK YOU :)  ");
+            Console.ForegroundColor = ConsoleColor.White;
+
+
+
+
+
+
+
+
+
+
+
+            /*Console.WriteLine("The fund amount that the user want  ");
+             double m2 = Convert.ToDouble(Console.ReadLine());
+             Console.WriteLine("Account balance is:" + (b - m2));*/
+
+
+        }
+    }
+}
